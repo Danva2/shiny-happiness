@@ -1,14 +1,19 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+from PyInstaller.utils.hooks import collect_data_files
 
 block_cipher = None
 
+# Collect all files in the 'reports', 'data', and 'src' directories
+datas = collect_data_files('reports', include_py_files=True)
+datas += collect_data_files('data', include_py_files=True)
+datas += collect_data_files('src', include_py_files=True)
 
 a = Analysis(
     ['mainloop.py'],
-    pathex=[],
+    pathex=['.'],  # Adjust path if necessary
     binaries=[],
-    datas=[],
+    datas=datas,  # Include the collected data files
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -19,6 +24,7 @@ a = Analysis(
     cipher=block_cipher,
     noarchive=False,
 )
+
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 
 exe = EXE(
@@ -27,7 +33,7 @@ exe = EXE(
     [],
     exclude_binaries=True,
     name='mainloop',
-    debug=False,
+    debug=True,
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
@@ -38,6 +44,7 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
 )
+
 coll = COLLECT(
     exe,
     a.binaries,
