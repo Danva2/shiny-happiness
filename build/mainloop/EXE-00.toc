@@ -66,7 +66,7 @@
  [],
  False,
  False,
- 1719901157,
+ 1719902068,
  [('run_d.exe',
    'f:\\DANVA2\\DANVA2\\.venv\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run_d.exe',
    'EXECUTABLE')],

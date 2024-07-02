@@ -123,7 +123,7 @@ dictionaryloop = 0
 dictionaryloop2 = 0
 
 stimuliStart = 0
-displayTime = 0.02  # NOTE: Not sure if this is what I changed
+displayTime = 2  # NOTE: Not sure if this is what I changed
 stimuliEndTime = 1
 # This is to set the number of the trial for scoring the right data
 

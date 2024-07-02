@@ -1,0 +1,13 @@
+# requirements.txt
+
+fillpdf==0.7.3
+pdf2image==1.17.0
+pdfrw2==0.5.0
+pillow==10.4.0
+Pillow-PIL==0.1.dev0
+pygame==2.6.0
+pygame-menu==4.4.3
+PyMuPDF==1.24.7
+PyMuPDFb==1.24.6
+pyperclip==1.9.0
+typing_extensions==4.12.2
